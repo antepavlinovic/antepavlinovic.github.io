@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
-    <title>Test Iframe</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
-    <!-- <script src='main.js'></script> --->
-</head>
-<body>
-    <iframe src="https://api-dev.workamo.com/auth/bankid/auth?requestId=06c48969-4c8f-41c4-872d-41d56319d6ba"></iframe>
+  <head>
+    <title>Publisher Test Page</title>
+    <script src="bundle.js"></script>
+  </head>
+  <body>
+    <!-- Set placeholder and submit button text -->
+    <form id="personalNumberValidation">
+      <input
+        name="personalNumberField"
+        type="text"
+        placeholder="YYYYMMDDXXXX"
+      />
+      <input type="submit" value="Validate" />
+    </form>
   </body>
 </html>
+​
+<script async>
+  // window.WorkamoValidationWidget_ready = function () {
+  //   WorkamoValidationWidget.init(function () {
+  //     WorkamoValidationWidget.productWidget({});
+  //   });
+  // };
+​
+  const onPersonalNumberValidateSubmission = data => {
+    console.log("Callback response", data);
+  };
+​
+  WorkamoValidationWidget.init({
+    onPersonalNumberValidateSubmission,
+    locale: "en"
+  });
+​
+  // WorkamoValidationWidget.productWidget({ id: "1337", dom: "widget-location-id" });
+</script>
