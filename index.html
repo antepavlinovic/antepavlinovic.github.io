@@ -16,22 +16,19 @@
     </form>
   </body>
 </html>
-​
 <script async>
-  // window.WorkamoValidationWidget_ready = function () {
-  //   WorkamoValidationWidget.init(function () {
-  //     WorkamoValidationWidget.productWidget({});
-  //   });
-  // };
+    // window.WorkamoValidationWidget_ready = function () {
+    //   WorkamoValidationWidget.init(function () {
+    //     WorkamoValidationWidget.productWidget({});
+    //   });
+    // };
+    const onPersonalNumberValidateSubmission = data => {
+      console.log("Callback response", data);
+    };
+    WorkamoValidationWidget.init({
+      onPersonalNumberValidateSubmission,
+      locale: "en"
+    });
+    // WorkamoValidationWidget.productWidget({ id: "1337", dom: "widget-location-id" });
+  </script>
 ​
-  const onPersonalNumberValidateSubmission = data => {
-    console.log("Callback response", data);
-  };
-​
-  WorkamoValidationWidget.init({
-    onPersonalNumberValidateSubmission,
-    locale: "en"
-  });
-​
-  // WorkamoValidationWidget.productWidget({ id: "1337", dom: "widget-location-id" });
-</script>
