@@ -2,4 +2,4 @@
 
 This page is going to be used for testing purpose of workamo wideget validation package
 
-Web page https://antepavlinovic.github.io
+Web page for testing https://antepavlinovic.github.io
