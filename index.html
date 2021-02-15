@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Publisher Test Page</title>
-    <script src="https://pvn-dev.workamo.com/bundle.js"></script>
-  </head>
-  <body>
-    <!-- Set placeholder and submit button text -->
-    <form id="personalNumberValidation">
-      <input
-        name="personalNumberField"
-        type="text"
-        placeholder="YYYYMMDDXXXX"
-      />
-      <input type="submit" value="Validate" />
-    </form>
-  </body>
+
+<head>
+  <title>Publisher Test Page</title>
+  <script src="https://pvn-dev.workamo.com/bundle.js"></script>
+</head>
+
+<body>
+  <!-- Set placeholder and submit button text -->
+  <form id="workamoPersonalNumberValidation">
+    <input name="workamoPersonalNumberField" type="text" placeholder="YYYYMMDDXXXX" />
+    <input type="submit" value="Validate" />
+  </form>
+
+</body>
+
 </html>
 <script async>
-    // window.WorkamoValidationWidget_ready = function () {
-    //   WorkamoValidationWidget.init(function () {
-    //     WorkamoValidationWidget.productWidget({});
-    //   });
-    // };
-    const onPersonalNumberValidateSubmission = data => {
-      console.log("Callback response", data);
-    };
-    WorkamoValidationWidget.init({
-      onPersonalNumberValidateSubmission,
-      locale: "en"
-    });
+  // window.WorkamoValidationWidget_ready = function () {
+  //   WorkamoValidationWidget.init(function () {
+  //     WorkamoValidationWidget.productWidget({});
+  //   });
+  // };
+  const onPersonalNumberValidateSubmission = data => {
+    console.log("Callback response", data);
+  };
+
+  WorkamoValidationWidget.init({
+    onPersonalNumberValidateSubmission,
+    locale: "en"
+  });
+
     // WorkamoValidationWidget.productWidget({ id: "1337", dom: "widget-location-id" });
-  </script>
+</script>
 ​
